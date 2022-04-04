@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMusic | #zingchart | Album10</title>
+    <link rel="stylesheet" href="./assets/style/main.css">
+    <link rel="stylesheet" href="./assets/fontawesome-free-6.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="assets/themify-icons/themify-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/image/unnamed.jpg" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <!-- sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="./assets/image/logo-dark.svg" alt="" class="sidebar-logo">
+            </div>
+            <div class="sidebar-wrapper">
+                <div class="logo-wrapper">
+                    <i class="fa-solid fa-circle-play"></i>
+                </div>
+                <p class="name-wrapper">Cá nhân</p>
+            </div>
+            <div class="sidebar-wrapper">
+                <div class="logo-wrapper">
+                    <i class="fa-solid fa-podcast"></i>
+                </div>
+                <p class="name-wrapper">Khám phá</p>
+            </div>
+            <div class="sidebar-wrapper">
+                <div class="logo-wrapper">
+                    <i class="fa-solid fa-podcast"></i>
+                </div>
+                <p class="name-wrapper">#zingchart</p>
+            </div>
+            <div class="sidebar-wrapper">
+                <div class="logo-wrapper">
+                    <i class="fa-solid fa-tower-broadcast"></i>
+                </div>
+                <p class="name-wrapper">Radio</p>
+            </div>
+            <div class="sidebar-wrapper">
+                <div class="logo-wrapper">
+                    <i class="fa-solid fa-podcast"></i>
+                </div>
+                <p class="name-wrapper">Theo dõi</p>
+            </div>
+            <div class="sidebar-divide"></div>
+            <ul class="sidebar-trend">
+                <li class="">
+                    <i class="fa-solid fa-music"></i>
+                    <a href="" class="name-trend hover-class">Nhạc mới</a>
+                </li>
+                <li class="">
+                    <i class="fad fa-circle"></i>
+                    <a href="" class="name-trend hover-class">Thể loại</a>
+                </li>
+                <li class="">
+                    <i class="fa-solid fa-star"></i>
+                    <a href="" class="name-trend hover-class">Top 100</a>
+                </li>
+                <li class="">
+                    <i class="fa-solid fa-film"></i>
+                    <a href="" class="name-trend hover-class">MV</a>
+                </li>
+            </ul>
+            <div class="sidebar-playlist">
+                <i class="fa-solid fa-plus"></i>
+                <p class="add-playlist">Tạo playlist mới</p>
+            </div>
+        </div>
+        <!-- music content -->
+        <div class="music play-padding">
+            <div class="nav-music">
+                <div class="nav-search">
+                    <i class="fa-solid fa-arrow-left button hover-class"></i>
+                    <i class="fa-solid fa-arrow-right button hover-class"></i>
+                    <div class="form-search">
+                        <form class="search-input">
+                            <p class="logo-search hover-class">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </p>
+                            <input onclick="SuggestList()" type="text" class="type-search" placeholder="Nhập tên bài hát...">
+                            <ul class="suggest-list">
+                                <li class="suggest-list-title">Đề xuất cho bạn</li>
+                                <li class="name-song">
+                                    <i class="ti-stats-up"></i>
+                                    La la la
+                                </li>
+                                <li class="name-song">
+                                    <i class="ti-stats-up"></i>
+                                    That girl
+                                </li>
+                                <li class="name-song">
+                                    <i class="ti-stats-up"></i>
+                                    Counting star
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+                <div class="nav-acc">
+                    <div class="setting-item download-item">
+                        <p class="theme-item">
+                            <i class="ti-download"></i>
+                        </p>
+                    </div>
+                    <div class="title-item1">Download</div>
+                    <div class="setting-item upload-item">
+                        <p class="theme-item">
+                            <i class="ti-upload"></i>
+                        </p>
+                    </div>
+                    <div class="title-item2">Upload</div>
+                    <div class="setting-item vip-item">
+                        <p class="theme-item">
+                            <i class="fa-solid fa-gem"></i>
+                        </p>
+                    </div>
+                    <div class="title-item3">VIP</div>
+                    <div class="setting-item set-item">
+                        <p class="theme-item">
+                            <i class="ti-settings"></i>
+                        </p>
+                    </div>
+                    <div class="title-item4">Setting</div>
+                    <div class="setting-item acc-item">
+                        <p class="theme-item user-item">
+                            <i class="fa-solid fa-user"></i>
+                        </p>
+                    </div>
+                    <div class="title-item5">Account</div>
+                </div>
+            </div>
+            <div class="zingchart">
+                <div class="action-zingchart">
+                    <div class="action-play">
+                        <div class="play-thumdnail">
+                            <img src="./assets/image/zingchart.jpg" alt="" class="play-img">
+                        </div>
+                    </div>
+                    <div class="action-info">
+                        <h3 class="action-title">#zingchart Tuần 11, 2020</h3>
+                        <p class="action-content">
+                            Cập nhật: 10-04-2020 <br>
+                            96 người yêu thích
+                        </p>
+                        <div class="play-button">
+                            <button class="play-btn">
+                                <i class="fa-solid fa-play"></i>
+                                PLAY
+                            </button>
+                            <button class="pause-btn">
+                                <i class="ti-control-pause"></i>
+                                PAUSE
+                            </button>
+                        </div>
+                        <div class="action-favourite">
+                            <div class="btn-favourite">
+                                <i class="ti-heart"></i>
+                            </div>
+                            <div class="btn-favourite">
+                                <i class="ti-more-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table class="list-zingchart">
+                    <thead>
+                        <tr>
+                            <th class="title-list"><i class="ti-exchange-vertical"></i></th>
+                            <th class="title-list">BÀI HÁT</th>
+                            <th class="title-list">ALBUM</th>
+                            <th class="title-list">THỜI GIAN</th>
+                        </tr>
+                    </thead>
+                    <tbody class="data-list">
+                        <!-- <tr>
+                            <td class="info-data"><i class="ti-music-alt"></i></td>
+                            <td class="info-data">
+                                <div class="info-data-container">
+                                    <img class="info-img" src="./assets/image/la la la.jpg" alt="">
+                                    <div class="name-data">
+                                        <p class="name-music">La La La</p>
+                                        <p class="name-singer">Naughty Boy, Sam Smith</p>
+                                    </div>
+                                    <div class="info-icon">
+                                        <i class="fa-solid fa-circle-play"></i>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="info-data">
+                                <div class="name-data">
+                                    <p class="name-album">Naughty Boy, Sam Smith</p>
+                                </div>
+                            </td>
+                            <td class="info-data">03:40</td>
+                        </tr> -->
+                        <!-- <tr>
+                            <td class="info-data"><i class="ti-music-alt"></i></td>
+                            <td class="info-data">
+                                <div class="info-data-container">
+                                    <img class="info-img" src="./assets/image/As_Long_As_You_Love_Me_(feat._Big_Sean)_-_Single.jpg" alt="">
+                                    <div class="name-data">
+                                        <p class="name-music">As long as you love me</p>
+                                        <p class="name-singer">Justin ft. Big Sean</p>
+                                    </div>
+                                    <div class="info-icon">
+                                        <i class="fa-solid fa-circle-play"></i>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="info-data">
+                                <div class="name-data">
+                                    <p class="name-album">As long as you love me(singer)</p>
+                                </div>
+                            </td>
+                            <td class="info-data">03:40</td>
+                        </tr>
+                        <tr>
+                            <td class="info-data"><i class="ti-music-alt"></i></td>
+                            <td class="info-data">
+                                <div class="info-data-container">
+                                    <img class="info-img" src="./assets/image/that girl.jpg" alt="">
+                                    <div class="name-data">
+                                        <p class="name-music">That Girl</p>
+                                        <p class="name-singer">Olly Murs 24HRS</p>
+                                    </div>
+                                    <div class="info-icon">
+                                        <i class="fa-solid fa-circle-play"></i>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="info-data">
+                                <div class="name-data">
+                                    <p class="name-album">That girl(singer)</p>
+                                </div>
+                            </td>
+                            <td class="info-data">03:40</td>
+                        </tr>
+                        <tr>
+                            <td class="info-data"><i class="ti-music-alt"></i></td>
+                            <td class="info-data">
+                                <div class="info-data-container">
+                                    <img class="info-img" src="./assets/image/counting stars.png" alt="">
+                                    <div class="name-data">
+                                        <p class="name-music">Counting stars</p>
+                                        <p class="name-singer">ONEREPUBLIC</p>
+                                    </div>
+                                    <div class="info-icon">
+                                        <i class="fa-solid fa-circle-play"></i>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="info-data">
+                                <div class="name-data">
+                                    <p class="name-album">ONEREPUBLIC(singer)</p>
+                                </div>
+                            </td>
+                            <td class="info-data">03:40</td>
+                        </tr>
+                        <tr>
+                            <td class="info-data"><i class="ti-music-alt"></i></td>
+                            <td class="info-data">
+                                <div class="info-data-container">
+                                    <img class="info-img" src="./assets/image/As_Long_As_You_Love_Me_(feat._Big_Sean)_-_Single.jpg" alt="">
+                                    <div class="name-data">
+                                        <p class="name-music">As long as you love me</p>
+                                        <p class="name-singer">Justin ft. Big Sean</p>
+                                    </div>
+                                    <div class="info-icon">
+                                        <i class="fa-solid fa-circle-play"></i>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="info-data">
+                                <div class="name-data">
+                                    <p class="name-album">As long as you love me(singer)</p>
+                                </div>
+                            </td>
+                            <td class="info-data">03:40</td>
+                        </tr>
+                        <tr>
+                            <td class="info-data"><i class="ti-music-alt"></i></td>
+                            <td class="info-data">
+                                <div class="info-data-container">
+                                    <img class="info-img" src="./assets/image/that girl.jpg" alt="">
+                                    <div class="name-data">
+                                        <p class="name-music">That Girl</p>
+                                        <p class="name-singer">Olly Murs 24HRS</p>
+                                    </div>
+                                    <div class="info-icon">
+                                        <i class="fa-solid fa-circle-play"></i>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="info-data">
+                                <div class="name-data">
+                                    <p class="name-album">That girl(singer)</p>
+                                </div>
+                            </td>
+                            <td class="info-data">03:40</td>
+                        </tr>
+                        <tr>
+                            <td class="info-data"><i class="ti-music-alt"></i></td>
+                            <td class="info-data">
+                                <div class="info-data-container">
+                                    <img class="info-img" src="./assets/image/counting stars.png" alt="">
+                                    <div class="name-data">
+                                        <p class="name-music">Counting stars</p>
+                                        <p class="name-singer">ONEREPUBLIC</p>
+                                    </div>
+                                    <div class="info-icon">
+                                        <i class="fa-solid fa-circle-play"></i>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="info-data">
+                                <div class="name-data">
+                                    <p class="name-album">ONEREPUBLIC(singer)</p>
+                                </div>
+                            </td>
+                            <td class="info-data">03:40</td>
+                        </tr>
+                        <tr>
+                            <td class="info-data"><i class="ti-music-alt"></i></td>
+                            <td class="info-data">
+                                <div class="info-data-container">
+                                    <img class="info-img" src="./assets/image/As_Long_As_You_Love_Me_(feat._Big_Sean)_-_Single.jpg" alt="">
+                                    <div class="name-data">
+                                        <p class="name-music">As long as you love me</p>
+                                        <p class="name-singer">Justin ft. Big Sean</p>
+                                    </div>
+                                    <div class="info-icon">
+                                        <i class="fa-solid fa-circle-play"></i>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="info-data">
+                                <div class="name-data">
+                                    <p class="name-album">As long as you love me(singer)</p>
+                                </div>
+                            </td>
+                            <td class="info-data">03:40</td>
+                        </tr>
+                        <tr>
+                            <td class="info-data"><i class="ti-music-alt"></i></td>
+                            <td class="info-data">
+                                <div class="info-data-container">
+                                    <img class="info-img" src="./assets/image/that girl.jpg" alt="">
+                                    <div class="name-data">
+                                        <p class="name-music">That Girl</p>
+                                        <p class="name-singer">Olly Murs 24HRS</p>
+                                    </div>
+                                    <div class="info-icon">
+                                        <i class="fa-solid fa-circle-play"></i>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="info-data">
+                                <div class="name-data">
+                                    <p class="name-album">That girl(singer)</p>
+                                </div>
+                            </td>
+                            <td class="info-data">03:40</td>
+                        </tr>
+                        <tr>
+                            <td class="info-data"><i class="ti-music-alt"></i></td>
+                            <td class="info-data">
+                                <div class="info-data-container">
+                                    <img class="info-img" src="./assets/image/counting stars.png" alt="">
+                                    <div class="name-data">
+                                        <p class="name-music">Counting stars</p>
+                                        <p class="name-singer">ONEREPUBLIC</p>
+                                    </div>
+                                    <div class="info-icon">
+                                        <i class="fa-solid fa-circle-play"></i>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="info-data">
+                                <div class="name-data">
+                                    <p class="name-album">ONEREPUBLIC(singer)</p>
+                                </div>
+                            </td>
+                            <td class="info-data">03:40</td>
+                        </tr>
+                        <tr>
+                            <td class="info-data"><i class="ti-music-alt"></i></td>
+                            <td class="info-data">
+                                <div class="info-data-container">
+                                    <img class="info-img" src="./assets/image/As_Long_As_You_Love_Me_(feat._Big_Sean)_-_Single.jpg" alt="">
+                                    <div class="name-data">
+                                        <p class="name-music">As long as you love me</p>
+                                        <p class="name-singer">Justin ft. Big Sean</p>
+                                    </div>
+                                    <div class="info-icon">
+                                        <i class="fa-solid fa-circle-play"></i>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="info-data">
+                                <div class="name-data">
+                                    <p class="name-album">As long as you love me(singer)</p>
+                                </div>
+                            </td>
+                            <td class="info-data">03:40</td>
+                        </tr>
+                        <tr>
+                            <td class="info-data"><i class="ti-music-alt"></i></td>
+                            <td class="info-data">
+                                <div class="info-data-container">
+                                    <img class="info-img" src="./assets/image/that girl.jpg" alt="">
+                                    <div class="name-data">
+                                        <p class="name-music">That Girl</p>
+                                        <p class="name-singer">Olly Murs 24HRS</p>
+                                    </div>
+                                    <div class="info-icon">
+                                        <i class="fa-solid fa-circle-play"></i>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="info-data">
+                                <div class="name-data">
+                                    <p class="name-album">That girl(singer)</p>
+                                </div>
+                            </td>
+                            <td class="info-data">03:40</td>
+                        </tr>
+                        <tr>
+                            <td class="info-data"><i class="ti-music-alt"></i></td>
+                            <td class="info-data">
+                                <div class="info-data-container">
+                                    <img class="info-img" src="./assets/image/counting stars.png" alt="">
+                                    <div class="name-data">
+                                        <p class="name-music">Counting stars</p>
+                                        <p class="name-singer">ONEREPUBLIC</p>
+                                    </div>
+                                    <div class="info-icon">
+                                        <i class="fa-solid fa-circle-play"></i>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="info-data">
+                                <div class="name-data">
+                                    <p class="name-album">ONEREPUBLIC(singer)</p>
+                                </div>
+                            </td>
+                            <td class="info-data">03:40</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- play music -->
+    <div class="play-container">
+        <div class="info-container"></div>
+        <div class="info-music">
+            <img src="./assets/image/that girl.jpg" alt="" class="img-music">
+            <div class="title-music">
+                <h4 class="">That Girl</h4>
+                <p class="singer">Olly Murs 24HRS</p>
+            </div>
+            <div class="icon-favourite">
+                <i class="ti-heart"></i>
+                <i class="ti-more-alt"></i>
+            </div>
+        </div>
+        <div class="action-music">
+            <div class="control">
+                <button class="control-btn random-class">
+                    <i class="ti-control-shuffle random-btn"></i></button>
+                <button class="control-btn prev-btn">
+                    <i class="fa-solid fa-backward-step"></i></button>
+                <button class="control-btn play-song">
+                    <i class="fa-solid fa-play icon-play"></i>
+                    <i class="fa-solid fa-pause icon-pause"></i>
+                </button>
+                <button class="control-btn next-btn">
+                    <i class="fa-solid fa-forward-step"></i></button>
+                <button class="control-btn repeat-class">
+                    <i class="ti-reload repeat-btn"></i></button>
+            </div>
+            <div class="control-play">
+                <span class="time-left">00:00</span>
+                <div class="duration-play">
+                    <input type="range" value="0" step="1" min="0" max="1000" class="progress">
+                </div>
+                <audio src="" class="audio"></audio>
+                <span class="time-right">00:00</span>
+            </div>
+        </div>
+        <div class="volume-music">
+            <i class="ti-microphone-alt"></i>
+            <i class="ti-headphone-alt"></i>
+            <i class="ti-volume"></i>
+            <i class="fa-solid fa-photo-film"></i>
+        </div>
+    </div>
+    <script src="./assets/style/main.js"></script>
+</body>
+</html>
