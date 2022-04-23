@@ -1,4 +1,10 @@
 /**
+ * lấy giá trị --> properties
+ * lắng nghe xự kiện --> event
+ * hành động --> methods
+ */
+
+/**
  * 1. Render playlist
  * 2. Scroll top -> k có
  * 3. Play pause seek
@@ -12,6 +18,13 @@
  * 11. Volume
  * 12. Progress time
  * 13. play button
+ */
+/**
+ * LỖI CHƯA FIX ĐC
+ * 1. tua bị giật
+ * 2. chưa css range
+ * 3. nút play tương tác chưa chuẩn
+ * 4. chưa đổi đc format thời gian -> đã fix nhưng k hiểu
  */
 
 const $ = document.querySelector.bind(document);
@@ -31,12 +44,16 @@ const random = $('.random-class')
 const playlist = $('.data-list')
 const scroll = $('.option')
 const playButton = $('.play-button')
+const mute = $('.icon-mute')
+const volumeChange = $('.volume')
+const timeSong = $('.time-left')
 
 const app  = {
     currentIndex: 0,
     isPlaying: false,
     isRandom: false,
     isRepeat: false,
+    isMute: false,
     config: JSON.parse(localStorage.getItem(PLAYER_STORAGE_KEY)) || {},
     setConfig: function(key, value){
         app.config[key] = value
@@ -187,17 +204,40 @@ const app  = {
             if(audio.duration){
                 progress.value = Math.floor(audio.currentTime / audio.duration * 1000)
             }
+            // format thời gian
+            timeSong.value = Math.floor(audio.currentTime)
+            var minutes = Math.floor(timeSong.value / 60);
+
+            var seconds = timeSong.value - minutes * 60;
+
+            function str_pad_left(string,pad,length) {
+                return (new Array(length+1).join(pad)+string).slice(-length);
+            }
+
+            var finalTime = str_pad_left(minutes,'0',2)+':'+str_pad_left(seconds,'0',2);
+            timeSong.innerHTML = finalTime
+            
         }
         // tua
         progress.onchange = function(){
             const seekTime = audio.duration / 1000 * progress.value
             audio.currentTime = seekTime
         }
+        // tăng giảm âm lượng
+        audio.volume = 0.5
+        volumeChange.onchange = function(){
+            audio.volume = volumeChange.value
+        }
+        // tắt tiếng
+        mute.onclick = function(){
+            audio.volume = 0
+            volumeChange.value = 0
+        }
         // quay cd khi play
         const cdPlay = img.animate([
             {transform: 'rotate(360deg)'}
         ],{
-            duration: 5000, // cd quay trong 10 giây sẽ hết 1 vòng
+            duration: 5000, // cd quay trong 5 giây sẽ hết 1 vòng
             iterations: Infinity // quay vô hạn
         });
         cdPlay.pause();
@@ -273,14 +313,6 @@ const app  = {
     // phát bài hát ngẫu nhiên
     playRandom: function(){
         let newIndex
-        // for(let i = 0; i < app.songs.length; i++){
-        //     if(i === app.currentIndex){
-        //         i++
-        //         continue
-        //     }else{
-        //         newIndex = Math.floor(Math.random() * app.songs.length)
-        //     }
-        // }
         do{
             newIndex = Math.floor(Math.random() * app.songs.length)
         }while(newIndex === app.currentIndex)
@@ -312,6 +344,7 @@ const app  = {
         // định nghĩa thuộc tính get cho object, mục đích lấy ra index
         app.defineProperties()
 
+        // xử lý các sự kiện / hành động
         app.handleEvent()
 
         // load bài hát
