@@ -80,13 +80,13 @@ const app = {
     },
     {
       name: "Take Me To Your Heart",
-      single: "ONEREPUBLIC",
+      single: "Michael Learns To Rock",
       image: "./assets/image/takeme.jpg",
       music: "./assets/music/TakeMe.mp3",
     },
     {
       name: "Anywhere I go",
-      single: "ONEREPUBLIC",
+      single: "Victone",
       image: "./assets/image/anywhereIgo.jpg",
       music: "./assets/music/anywhereIgo.mp3",
     },
@@ -116,13 +116,13 @@ const app = {
     },
     {
       name: "Take Me To Your Heart",
-      single: "ONEREPUBLIC",
+      single: "Michael Learns To Rock",
       image: "./assets/image/takeme.jpg",
       music: "./assets/music/TakeMe.mp3",
     },
     {
       name: "Anywhere I go",
-      single: "ONEREPUBLIC",
+      single: "Victone",
       image: "./assets/image/anywhereIgo.jpg",
       music: "./assets/music/anywhereIgo.mp3",
     },
